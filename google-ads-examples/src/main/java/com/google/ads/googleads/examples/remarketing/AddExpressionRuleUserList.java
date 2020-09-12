@@ -97,6 +97,7 @@ public class AddExpressionRuleUserList {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START ZiZTYxYmE3]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     String urlString = "url__";
 
@@ -180,4 +181,5 @@ public class AddExpressionRuleUserList {
       System.out.printf("Created user list with resource name '%s'.%n", userListResourceName);
     }
   }
+  // [END ZiZTYxYmE3]
 }

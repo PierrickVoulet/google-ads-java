@@ -184,6 +184,7 @@ public class AddAdCustomizer {
    * @param feedName the name of the feed to create.
    * @return the resource name of the newly created feed.
    */
+  // [START kzYzVmYTZj]
   private String createAdCustomizerFeed(
       GoogleAdsClient googleAdsClient, long customerId, String feedName) {
 
@@ -228,6 +229,7 @@ public class AddAdCustomizer {
       return feedResourceName;
     }
   }
+  // [END kzYzVmYTZj]
 
   /**
    * Retrieves all the attributes for a feed and returns them in a map using the attribute names as
@@ -238,6 +240,7 @@ public class AddAdCustomizer {
    * @param feedResourceName the resource name of the feed.
    * @return the attributes of the feed.
    */
+  // [START NlOGM2NWIw]
   private Map<String, FeedAttribute> getFeedAttributes(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
     String query =
@@ -272,6 +275,7 @@ public class AddAdCustomizer {
     }
     return feedAttributes;
   }
+  // [END NlOGM2NWIw]
 
   /**
    * Creates a feed mapping and sets the feed as an ad customizer feed.
@@ -281,6 +285,7 @@ public class AddAdCustomizer {
    * @param feedResourceName the resource name of the feed.
    * @param feedAttributes the attributes of the feed.
    */
+  // [START QxNDFiNDY0]
   private void createAdCustomizerMapping(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -332,6 +337,7 @@ public class AddAdCustomizer {
           "Added feed mapping with resource name %s.%n", response.getResults(0).getResourceName());
     }
   }
+  // [END QxNDFiNDY0]
 
   /**
    * Creates two different feed items to enable two different ad customizations.
@@ -342,6 +348,7 @@ public class AddAdCustomizer {
    * @param feedAttributes the attributes of the feed.
    * @return the resource names of the feed items.
    */
+  // [START QzNDRkZTgx]
   private List<String> createFeedItems(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -384,6 +391,7 @@ public class AddAdCustomizer {
       return feedItemResourceNames;
     }
   }
+  // [END QzNDRkZTgx]
 
   /**
    * Helper function to create a FeedItemOperation.
@@ -395,6 +403,7 @@ public class AddAdCustomizer {
    * @param feedAttributes the attributes to be set on the feed.
    * @return a FeedItemOperation to create a feed item.
    */
+  // [START M4Y2M2NzY4]
   private FeedItemOperation createFeedItemOperation(
       String name,
       String price,
@@ -429,6 +438,7 @@ public class AddAdCustomizer {
 
     return FeedItemOperation.newBuilder().setCreate(feedItem).build();
   }
+  // [END M4Y2M2NzY4]
 
   /**
    * Restricts the feed items to work only with a specific ad group; this prevents the feed items
@@ -440,6 +450,7 @@ public class AddAdCustomizer {
    * @param adGroupIds the ad group IDs to bind the feed items to.
    * @param feedItemResourceNames the resource names of the feed items.
    */
+  // [START U0MWI2Y2Ez]
   private void createFeedItemTargets(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -474,6 +485,7 @@ public class AddAdCustomizer {
       }
     }
   }
+  // [END U0MWI2Y2Ez]
 
   /**
    * Creates expanded text ads that use the ad customizer feed to populate the placeholders.
@@ -483,6 +495,7 @@ public class AddAdCustomizer {
    * @param adGroupIds the ad group IDs in which to create the ads.
    * @param feedName the name of the feed.
    */
+  // [START c5MWU0YjI3]
   private void createAdsWithCustomizations(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> adGroupIds, String feedName) {
 
@@ -529,4 +542,5 @@ public class AddAdCustomizer {
       }
     }
   }
+  // [END c5MWU0YjI3]
 }

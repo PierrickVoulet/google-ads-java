@@ -101,6 +101,7 @@ public class AddCampaignLabels {
    * @param labelId the ID of the label to attach to campaigns.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START kwYjU4NjM2]
   private void runExample(
       GoogleAdsClient googleAdsClient, long customerId, List<Long> campaignIds, Long labelId) {
     // Gets the resource name of the label to be added across all given campaigns.
@@ -131,4 +132,5 @@ public class AddCampaignLabels {
       }
     }
   }
+  // [END kwYjU4NjM2]
 }

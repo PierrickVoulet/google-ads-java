@@ -205,6 +205,7 @@ public class AddRealEstateFeed {
    * @param feedResourceName the resource name of the feed.
    * @return a Map containing the RealEstatePlaceholderField and FeedAttribute.
    */
+  // [START NhZWMwMjY2]
   private Map<RealEstatePlaceholderField, FeedAttribute> getFeed(
       GoogleAdsClient googleAdsClient, long customerId, String feedResourceName) {
     // Constructs the query.
@@ -256,6 +257,7 @@ public class AddRealEstateFeed {
       return feedAttributes;
     }
   }
+  // [END NhZWMwMjY2]
 
   /**
    * Creates a feed mapping for a given feed.
@@ -357,6 +359,7 @@ public class AddRealEstateFeed {
    * @param feedAttributes the feed attributes.
    * @param feedResourceName the feed resource name.
    */
+  // [START Y5YmU5NjY1]
   private void createFeedItems(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -440,4 +443,5 @@ public class AddRealEstateFeed {
       }
     }
   }
+  // [END Y5YmU5NjY1]
 }

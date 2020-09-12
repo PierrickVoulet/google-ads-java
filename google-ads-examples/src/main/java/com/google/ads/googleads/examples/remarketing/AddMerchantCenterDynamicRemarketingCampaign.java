@@ -159,6 +159,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * @param campaignBudgetId the campaign budget ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START hjNGZkM2Jj]
   private String createCampaign(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -205,6 +206,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       return campaignResourceName;
     }
   }
+  // [END hjNGZkM2Jj]
 
   /**
    * Creates an ad group for the remarketing campaign.
@@ -214,6 +216,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * @param campaignResourceName the campaign resource name.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START c5NWJhODc1]
   private String createAdGroup(
       GoogleAdsClient googleAdsClient, long customerId, String campaignResourceName) {
     // Creates the ad group.
@@ -239,6 +242,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       return adGroupResourceName;
     }
   }
+  // [END c5NWJhODc1]
 
   /**
    * Creates the responsive display ad.
@@ -248,6 +252,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * @param adGroupResourceName the campaign resource name.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START JjZTFlZWQ5]
   private void createAd(
       GoogleAdsClient googleAdsClient, long customerId, String adGroupResourceName)
       throws IOException {
@@ -322,6 +327,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
           response.getResults(0).getResourceName());
     }
   }
+  // [END JjZTFlZWQ5]
 
   /**
    * Adds an image to the Google Ads account.
@@ -369,6 +375,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
    * @param userListId ID of the user list.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START Y4MTIxNjI1]
   private void attachUserList(
       GoogleAdsClient googleAdsClient,
       long customerId,
@@ -398,4 +405,5 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
           response.getResults(0).getResourceName());
     }
   }
+  // [END Y4MTIxNjI1]
 }
